@@ -1,0 +1,9 @@
+.home_gridPane{
+    -fx-background-image: url("file:src/sample/login.jpg") no-repeat left center;
+    -fx-background-size:cover;
+}
+.szjs_title{
+    -fx-width:300;
+    -fx-height:200;
+    -fx-text-fill:#FF4500;
+}

@@ -1,0 +1,39 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<GridPane fx:controller="sample.Controller" styleClass="index" minWidth="1024" minHeight="768"
+          xmlns:fx="http://javafx.com/fxml" alignment="BOTTOM_RIGHT" hgap="25" vgap="20">
+    <!--GridPane布局是FXML的根元素，有两个主要的属性：-->
+    <!--fx:controller:用来指定元素触发的事件，是事件控制类。-->
+    <!--xmlns:fx:指定命名空间，这是必须得属性-->
+    <!--剩下的属性指定了gridpane的排列布局信息，包括行列间距，居中。-->
+    <!--padding元素指定了gridpane的边缘空隙-->
+    <!--因为窗口的大小是可变的，grid面板里的节点应该跟着他们的布局约束来改变。-->
+    <padding>
+        <Insets top="15" right="100" bottom="50" left="15"/>
+    </padding>
+    <!--GridPane.columnIndex 和 GridPane.rowIndex属性修正了Text控件在Grid中的位置，-->
+    <!--grid中的行列从0开始，这个Text的位置为0,0.也就意味着放到了第一列，第一行的位置。-->
+    <!--GridPane.columnSpan属性设置的值为2，意思是这个Text对象合并了两列-->
+    <!--<Text text="Welcome"-->
+    <!--GridPane.columnIndex="0" GridPane.rowIndex="0"-->
+    <!--GridPane.columnSpan="2"/>-->
+
+    <Label text="欢迎登录" styleClass="welcome" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="8"/>
+
+    <Label text="账 户:" styleClass="account_label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField fx:id="account" styleClass="account_text" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="8"/>
+
+    <Label text="密 码:" styleClass="password_label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <PasswordField fx:id="password" styleClass="password_text" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="8"/>
+
+    <Button text="   重    置   " styleClass="reset" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#indexReset" GridPane.columnSpan="4"/>
+
+    <Button text="   登    录   " styleClass="login" GridPane.columnIndex="5" GridPane.rowIndex="3" onAction="#indexLogin" GridPane.columnSpan="4"/>
+
+    <Text fx:id="error" styleClass="error" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="5"/>
+
+</GridPane>
