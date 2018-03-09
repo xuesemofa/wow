@@ -1,18 +1,17 @@
 .home_gridPane{
-    -fx-background-image: url("file:src/sample/login.jpg") no-repeat left center;
+    -fx-background-image: url("../img/backgroup.gif") no-repeat left center;
     -fx-background-size:cover;
 }
 .logout_button{
     -fx-color:red;
     /*设置圆角*/
-    -fx-padding:20;
     -fx-background-radius: 90;
     -fx-border-radius: 90;
+    -fx-font-size:30;
 }
-.fj{
-    -fx-color:red;
+.start_game_button{
+    -fx-color:green;
     /*设置圆角*/
-    -fx-padding:20;
-    -fx-background-radius: 90;
-    -fx-border-radius: 90;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
 }

@@ -37,4 +37,8 @@ public class HomeController {
         stages.get(0).close();
     }
 
+    @FXML
+    private void startGame() throws Exception{
+    }
+
 }
