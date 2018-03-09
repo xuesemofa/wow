@@ -2,6 +2,8 @@ package sample.org.fx.com.home.controller;
 
 import com.sun.javafx.robot.impl.FXRobotHelper;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -27,4 +29,12 @@ public class HomeController {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    @FXML
+    private void logout() throws Exception {
+        //        获取stage
+        ObservableList<Stage> stages = FXRobotHelper.getStages();
+        stages.get(0).close();
+    }
+
 }
