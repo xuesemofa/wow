@@ -1,6 +1,6 @@
 .home_gridPane{
-    -fx-background-image: url("../img/backgroup.gif") no-repeat left center;
-    -fx-background-size:cover;
+    /*-fx-background-image: url("../img/backgroup.gif") no-repeat left center;
+    -fx-background-size:cover;*/
 }
 .logout_button{
     -fx-color:red;

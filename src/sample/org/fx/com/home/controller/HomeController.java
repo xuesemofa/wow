@@ -2,12 +2,12 @@ package sample.org.fx.com.home.controller;
 
 import com.sun.javafx.robot.impl.FXRobotHelper;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.org.fx.com.game.controller.GameController;
 
 /**
  * @author ld
@@ -31,14 +31,15 @@ public class HomeController {
     }
 
     @FXML
-    private void logout() throws Exception {
+    private void logout() {
         //        获取stage
         ObservableList<Stage> stages = FXRobotHelper.getStages();
         stages.get(0).close();
     }
 
     @FXML
-    private void startGame() throws Exception{
+    private void startGame() throws Exception {
+        GameController gameController = new GameController();
+        gameController.init();
     }
-
 }

@@ -41,6 +41,7 @@ public class Controller {
                 } catch (Exception e) {
 //                    Util.display("错误", "跳转异常");
                     error.setText("跳转异常");
+                    e.printStackTrace();
                 }
             } else
 //                Util.display("错误", "账户密码错误");

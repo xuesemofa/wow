@@ -29,13 +29,25 @@
 
     <Label text="密 码:" styleClass="password_label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
-    <PasswordField fx:id="password" styleClass="password_text" GridPane.columnIndex="1" GridPane.rowIndex="2"
+    <PasswordField fx:id="password"
+                   styleClass="password_text"
+                   onAction="#indexLogin"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"
                    GridPane.columnSpan="8"/>
 
-    <Button text="   重    置   " styleClass="reset" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#indexReset"
+    <Button text="   重    置   "
+            styleClass="reset"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="3"
+            onAction="#indexReset"
             GridPane.columnSpan="4"/>
 
-    <Button text="   登    录   " styleClass="login" GridPane.columnIndex="5" GridPane.rowIndex="3" onAction="#indexLogin"
+    <Button text="   登    录   "
+            styleClass="login"
+            GridPane.columnIndex="5"
+            GridPane.rowIndex="3"
+            onAction="#indexLogin"
             GridPane.columnSpan="4"/>
 
     <Text fx:id="error" styleClass="error" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="5"/>
