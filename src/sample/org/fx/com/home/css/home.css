@@ -5,13 +5,11 @@
 .logout_button{
     -fx-color:red;
     /*设置圆角*/
-    -fx-background-radius: 90;
-    -fx-border-radius: 90;
-    -fx-font-size:30;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
 }
-.start_game_button{
-    -fx-color:green;
+.menus{
     /*设置圆角*/
-    -fx-background-radius: 10;
-    -fx-border-radius: 10;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
 }

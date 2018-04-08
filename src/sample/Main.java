@@ -11,8 +11,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("WOW");
-        Scene scene = new Scene(root, 1024, 768);
+        primaryStage.setTitle("后台管理");
+        Scene scene = new Scene(root, 600, 400);
 //        加载外部css
         scene.getStylesheets().add(getClass().getResource("sample.css").toExternalForm());
         primaryStage.setScene(scene);

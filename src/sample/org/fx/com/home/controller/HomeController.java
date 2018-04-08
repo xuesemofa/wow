@@ -6,8 +6,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import sample.org.fx.com.game.controller.GameController;
+import sample.org.fx.com.grzl.controller.GrzlController;
 
 /**
  * @author ld
@@ -17,14 +18,17 @@ import sample.org.fx.com.game.controller.GameController;
  */
 public class HomeController {
 
+    @FXML
+    private Pane bodys;
+
     public void init() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmls/home.fxml"));
 //        获取stage
         ObservableList<Stage> stages = FXRobotHelper.getStages();
 //        设置为新的内容窗口
         Stage primaryStage = stages.get(0);
-        primaryStage.setTitle("欢迎来到WOW");
-        Scene scene = new Scene(root, 1024, 768);
+        primaryStage.setTitle("欢迎来到后台管理");
+        Scene scene = new Scene(root, primaryStage.getScene().getWidth(), primaryStage.getScene().getHeight());
         scene.getStylesheets().add(getClass().getResource("../css/home.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -38,8 +42,7 @@ public class HomeController {
     }
 
     @FXML
-    private void startGame() throws Exception {
-        GameController gameController = new GameController();
-        gameController.init();
+    private void grzl() {
+        GrzlController.grzl(bodys);
     }
 }
